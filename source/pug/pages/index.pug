@@ -1,0 +1,148 @@
+doctype html
+html.no-js(lang="ru-RU")
+  head
+    title Nerds
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet" href="css/normalize.css")
+  body
+    header.header
+      nav.header__nav
+        a.header__logo
+          img(src="image/nerds-logo.png" width="160" height="65" alt="Лого Nerds")
+        ul.header__list.nav
+          li.nav__item
+            a.nav__link(href="#") Студия
+          li.nav__item
+            a.nav__link(href="#") Клиенты
+          li.nav__item
+            a.nav__link(href="catalog-index.html") Магазин
+          li.nav__item
+            a.nav__link(href="#") Контакты
+        a.header__cart.nav__link(href="#")
+          include ../../image/svg-image/cart-icon.svg
+          |Корзина
+    main.main
+      h1.visually-hidden Студия Nerds
+      section.main__slider.slider
+        .slider__wrapper
+          h2.visually-hidden Слайдер
+          .slider__controls.slider-controls
+            button.slider-controls__control.slider-controls__control--checked(type="button") Первый слайд
+            button.slider-controls__control(type="button") Второй слайд
+            button.slider-controls__control(type="button") Третий слайд
+          ul.slider__features
+            li.slider__item.slider__item--active
+              h2.slider__title Долго, дорого, скрупулезно.
+              p.slider__text Математически выверенный дизайн
+              |для вашего сайта или мобильного приложения.
+              a.slider__button.button(href="#") Узнать больше
+            li.slider__item
+              h2.slider__title Любим математику как никто другой
+              p.slider__text Никакого креатива, только математические формулы для расчета идеальных пропорций.
+              a.slider__button.button(href="#") Узнать больше
+            li.slider__item
+              h2.slider__title Только ночь, только хардкор
+              p.slider__text Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.
+              a.slider__button.button(href="#") Узнать больше
+      section.main__products.products
+        h2.visually-hidden Наши услуги
+        ul.products__list
+          li.products__item
+            article.products__feature.product
+              h3.product__title Веб-сайты
+              p.product__text Мир никогда не будет прежним после того как увидит ваш сайт!
+              button.product__button.button(type="button") Заказать
+          li.products__item
+            article.products__feature.product
+              h3.product__title Приложения
+              p.product__text Покорите топ-10 приложений в AppStore и Google Play
+              button.product__button.button.button--green(type="button") Заказать
+          li.products__item
+            article.products__feature.product
+              h3.product__title Презентации
+              p.product__text Вы даже не подозреваете, насколько вы изумительны!
+              button.product__button.button.button--yellow(type="button") Заказать
+      section.main__info.info
+        h2.visually-hidden О нас
+        .info__description.description
+          b.description__title Мы — маленькая, но гордая дизайн-студия из Краснодара.
+          p.description__text Исповедуем принципы минимализма и чистоты. Ставим математический расчет привыше креатива. Работаем не покладая рук, как роботы.
+          ul.description__list.list
+            h3.list__title Выполняем заказы на разработку:
+            li.list__text Веб-сайтов любой сложности
+            li.list__text Мобильных приложений для IOS и Android
+            li.list__text Слайдшоу и видио для корпоративных презентаций
+        .info__statistics.statistics
+          h3.statistics__title C 2004 года любим точность во всем:
+          dl.statistics__table
+            dt.statistics__term Уровень самоотдачи
+            dd.statistics__value 146
+              sup.statistics__percent %
+            dt.statistics__term Соблюдение сроков
+            dd.statistics__value 100
+              sup.statistics__percent %
+            dt.statistics__term Минимальная предоплата
+            dd.statistics__value 50
+              sup.statistics__percent %
+      section.main__partners.partners
+        h2.visually-hidden Наши партнеры
+        ul.partners__list
+          li.partners__item
+            a.partners__link.partner(href="#")
+              span.visually-hidden Ссылка на html academy
+              img.partner__logo(src="image/partner-html.png" width="199" height="68" alt="Лого html academy")
+          li.partners__item
+            a.partners__link.partner(href="#")
+              span.visually-hidden Ссылка на Barbershop
+              img.partner__logo(src="image/partner-borodinski.png" width="209" height="90" alt="Лого Barbershop Borodinski")
+          li.partners__item
+            a.partners__link.partner(href="#")
+              span.visually-hidden Ссылка на Pink
+              img.partner__logo(src="image/partner-pink.png" width="185" height="52" alt="Лого Pink")
+          li.partners__item
+            a.partners__link.partner(href="#")
+              span.visually-hidden Ссылка на Mishka
+              img.partner__logo(src="image/partner-mishka.png" width="173" height="54" alt="Лого Mishka")
+    footer.footer
+      section.footer__location.location
+        h3.visually-hidden Наш адрес
+        .location__address.address
+          .address__wrapper
+            h4.address__title NЁRDS DESIGN STUDIO
+            p.address__text 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            p.address__text тел. +7 (812) 275-75-75
+            a.address__button.button(href="#") Напишите нам
+        .location__map.map
+          .map__img
+            img(src="image/map.png" width="1440" height="416" alt="Карта проезда")
+          .map__script
+      section.footer__socials.socials
+        .socials__discription
+          h3.socials__title Давайте дружить, это выгодно!
+          p.socials__text Скидка 10% для друзей из социальных сетей.
+        ul.socials__links.social
+          li.social__item
+            a.social__link(href="#") Vk
+              include ../../image/svg-image/vk-icon.svg
+          li.social__item
+            a.social__link(href="#") Facebook
+              include ../../image/svg-image/fb-icon.svg
+          li.social__item
+            a.social__link(href="#") Instagram
+              include ../../image/svg-image/insta-icon.svg
+    section.modal
+      h2.modal__title Напишите нам
+      form.modal__form
+        label.modal__label Ваше имя:
+          input.modal__field(type="text" placeholder="Имя Фамилия" autocomplete="on" name="name")
+        label.modal__label Ваш e-mail:
+          input.modal__field(type="email" placeholder="email@example.com" autocomplete="on" name="email")
+        label.modal__label Текст письма:
+          textarea.modal__field(placeholder="В свободной форме" name="comment" cols="30" rows="6")
+        button.modal__button.button(type="submit") Отправить
+      button.modal__close Закрыть окно
+
+
+
+

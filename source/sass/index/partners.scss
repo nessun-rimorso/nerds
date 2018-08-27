@@ -1,0 +1,44 @@
+.partners {
+  @include section-border;
+}
+
+.main__partners {
+  padding: 0 20px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  width: 1200px;
+}
+
+.partners__list {
+  padding: 0;
+  margin: 0px 0px 0px 0px;
+  margin-bottom: 36px;
+  margin-top: 34px;
+}
+
+.partners__item {
+  list-style: none;
+  padding: 10px;
+}
+
+.partners__item + .partners__item {
+  padding-left: 20px;
+}
+
+.partner {
+  display: block;
+  &:hover .partner__logo,
+  &:focus .partner__logo {
+    opacity: 1;
+    outline: none;
+    transition: 300ms ease-out;
+  }
+  &:active .partner__logo {
+    opacity: 0.1;
+    transition: 300ms ease-out;
+  }
+}
+
+.partner__logo {
+  opacity: 0.2;
+}

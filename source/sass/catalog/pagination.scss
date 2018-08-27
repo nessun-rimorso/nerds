@@ -1,0 +1,32 @@
+.main__pagination {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__item {
+  list-style: none;
+}
+
+.pagination__item + .pagination__item {
+  margin-left: 11px;
+}
+
+.pagination__link {
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+  display: block;
+
+  background-color: $grey-light6;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.pagination__link--next {
+  min-width: 260px;
+}
+
+.pagination__link--active {
+  background-color: $white;
+  box-shadow: inset 0 0 0 3px $grey-light6;
+}

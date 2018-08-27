@@ -1,0 +1,219 @@
+doctype html
+html.no-js(lang="ru-RU")
+  head
+    title Nerds
+    link(rel="stylesheet" href="css/style.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
+    link(rel="stylesheet" href="css/normalize.css")
+  body
+    header.header
+      nav.header__nav
+        a.header__logo(href="index.html")
+          include ../../image/svg-image/nerds-logo.svg
+        ul.header__list.nav
+          li.nav__item
+            a.nav__link(href="#") Студия
+          li.nav__item
+            a.nav__link(href="#") Клиенты
+          li.nav__item
+            a.nav__link.nav__link--active Магазин
+          li.nav__item
+            a.nav__link(href="#") Контакты
+        a.header__cart.nav__link(href="#")
+          include ../../image/svg-image/cart-icon.svg
+          | Корзина
+    main.main
+      .main__wrapper-title
+        h1.main__title Магазин готовых шаблонов
+      .main__wrapper-catalog
+        form.main__filters.filters
+          fieldset.filters__filter-fieldset.filter-fieldset
+            legend.filter-fieldset__title Стоимость
+            div.filter-fieldset__field
+              div.filter-fieldset__line
+                div.filter-fieldset__range
+                  h3.visually-hidden Кнопки выбора диапазона цены
+                button.filter-fieldset__btn-min.filter-btn(type="button") кнопка от
+                button.filter-fieldset__btn-max.filter-btn(type="button") кнопка до
+            .filter-fieldset__input-rate
+              label.filter-fieldset__signature--uppercase от
+                input.filter-fieldset__rate(type="number" value="0")
+              label.filter-fieldset__signature--uppercase до
+                input.filter-fieldset__rate(type="number" value="15000")
+          fieldset.filters__filter-fieldset.filter-fieldset
+            legend.filter-fieldset__title Сетка:
+            label.filter-fieldset__signature
+              input.visually-hidden(type="radio" name="grid" checked)
+              span.filter-fieldset__radio-indicator
+              | Адаптивная
+            label.filter-fieldset__signature
+              input.visually-hidden(type="radio" name="grid")
+              span.filter-fieldset__radio-indicator
+              | Фиксированная
+            label.filter-fieldset__signature
+              input.visually-hidden(type="radio" name="grid")
+              span.filter-fieldset__radio-indicator
+              | Резиновая
+          fieldset.filters__filter-fieldset.filter-fieldset
+            legend.filter-fieldset__title Особенности:
+            label.filter-fieldset__signature
+              input.visually-hidden(type="checkbox" name="slider" checked)
+              span.filter-fieldset__checkbox-indicator
+              | Слайдер
+            label.filter-fieldset__signature
+              input.visually-hidden(type="checkbox" name="advantages")
+              span.filter-fieldset__checkbox-indicator
+              | Блок преимуществ
+            label.filter-fieldset__signature
+              input.visually-hidden(type="checkbox" name="news" checked)
+              span.filter-fieldset__checkbox-indicator
+              | Новости
+            label.filter-fieldset__signature
+              input.visually-hidden(type="checkbox" name="gallery")
+              span.filter-fieldset__checkbox-indicator
+              | Галерея
+            label.filter-fieldset__signature
+              input.visually-hidden(type="checkbox" name="cart")
+              span.filter-fieldset__checkbox-indicator
+              | Корзина
+          button.filters__button.button--grey(type="button") Показать
+        .main__wrapper-content
+          section.main__sorting.sorting
+            ul.sorting__list
+              h3.sorting__title Сортировать:
+              li.sorting__item
+                button.sorting__button.sorting__button--active по цене
+              li.sorting__item
+                button.sorting__button по типу
+              li.sorting__item
+                button.sorting__button по названию
+              li.sorting__item
+                button.sorting__button.button-triangle
+                  span.button-triangle__img.button-triangle__img--active.button-triangle__bottom
+                  |стрелка вверх
+              li.sorting__item
+                button.sorting__button.button-triangle
+                  span.button-triangle__img.button-triangle__top
+                  |стрелка вниз
+          section.main__projects.projects
+            ul.projects__list
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                      <circle r="7" cx="10" cy="50%" fill="white"/>
+                      <circle r="7" cx="33" cy="50%" fill="white"/>
+                      <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-sedona.jpg" width="360" height="576" alt="Sedona")
+                  .project__description
+                    a.project__link(href="#") Sedona
+                    p.project__text Информационный сайт  для туристов
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                      <circle r="7" cx="10" cy="50%" fill="white"/>
+                      <circle r="7" cx="33" cy="50%" fill="white"/>
+                      <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-pink.jpg" width="360" height="576" alt="Pink App")
+                  .project__description
+                    a.project__link(href="#") Pink App
+                    p.project__text Продуктовый лендинг приложения для iOS и Android
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                    <circle r="7" cx="10" cy="50%" fill="white"/>
+                    <circle r="7" cx="33" cy="50%" fill="white"/>
+                    <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-barbershop.jpg" width="360" height="576" alt="Barbershop")
+                  .project__description
+                    a.project__link(href="#") Barbershop
+                    p.project__text Сайт салоны красоты. Для мужчин, да.
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                    <circle r="7" cx="10" cy="50%" fill="white"/>
+                    <circle r="7" cx="33" cy="50%" fill="white"/>
+                    <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-mishka.jpg" width="360" height="576" alt="Mishka")
+                  .project__description
+                    a.project__link(href="#") Mishka
+                    p.project__text Интернет-магазин  вязаных игрушек
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                    <circle r="7" cx="10" cy="50%" fill="white"/>
+                    <circle r="7" cx="33" cy="50%" fill="white"/>
+                    <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-aplus.jpg" width="360" height="576" alt="A Plus")
+                  .project__description
+                    a.project__link(href="#") A Plus
+                    p.project__text Лендинг курсов повышения квалификации
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+              li.projects__item
+                article.projects__blok.project
+                  .project__head
+                    <svg width="70" height="20">
+                    <circle r="7" cx="10" cy="50%" fill="white"/>
+                    <circle r="7" cx="33" cy="50%" fill="white"/>
+                    <circle r="7" cx="56" cy="50%" fill="white"/>
+                    </svg>
+                  img.project__image(src="image/img-kvast.jpg" width="360" height="576" alt="Кваст")
+                  .project__description
+                    a.project__link(href="#") Кваст
+                    p.project__text Промо-сайт производителя крафтового кваса
+                    a.project__button.button(href="#") 9 900 руб.
+                  span.project__description--background
+          ul.main__pagination.pagination
+            li.pagination__item
+              a.pagination__link.button--grey.pagination__link--active(href="#") 1
+            li.pagination__item
+              a.pagination__link.button--grey(href="#") 2
+            li.pagination__item
+              a.pagination__link.button--grey(href="#") 3
+            li.pagination__item
+              a.pagination__link.pagination__link--next.button--grey(href="#") Следующая
+    footer.footer
+      section.footer__location.location
+        h3.visually-hidden Наш адрес
+        .location__address.address
+          .address__wrapper
+            h4.address__title NЁRDS DESIGN STUDIO
+            p.address__text 191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            p.address__text тел. +7 (812) 275-75-75
+            a.address__button.button(href="#") Напишите нам
+        .location__map.map
+          .map__img
+            img(src="image/map.png" width="1440" height="416" alt="Карта проезда")
+          .map__script
+      section.footer__socials.socials
+        .socials__discription
+          h3.socials__title Давайте дружить, это выгодно!
+          p.socials__text Скидка 10% для друзей из социальных сетей.
+        ul.socials__links.social
+          li.social__item
+            a.social__link(href="#") Vk
+              include ../../image/svg-image/vk-icon.svg
+          li.social__item
+            a.social__link(href="#") Facebook
+              include ../../image/svg-image/fb-icon.svg
+          li.social__item
+            a.social__link(href="#") Instagram
+              include ../../image/svg-image/insta-icon.svg

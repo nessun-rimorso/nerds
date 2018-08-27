@@ -1,0 +1,133 @@
+.modal {
+  background-color: $white;
+  width: 960px;
+  box-sizing: border-box;
+  padding: 65px 100px 80px 100px;
+  box-shadow: 0 20px 40px rgba($black, 0.75);
+  display: none;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.modal__show {
+  display: block;
+}
+
+.modal__title {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 45px;
+
+  margin: 0;
+  margin-bottom: 45px;
+}
+
+.modal__label {
+  font-weight: bold;
+  line-height: 18px;
+
+  margin-bottom: 32px;
+}
+
+.modal__label:first-of-type {
+  margin-right: 40px;
+}
+
+.modal__label input {
+  width: 360px;
+}
+
+.modal__label textarea {
+  width: 760px;
+}
+
+.main__wrapper-title {
+  background-color: $grey-light6;
+  padding-top: 75px;
+  padding-bottom: 110px;
+}
+
+.modal__field {
+  line-height: 18px;
+  color: $grey-dark2;
+  box-shadow: inset 0 0 0 2px $grey-light3;
+  border: none;
+  border-radius: 3px;
+  &:hover {
+    box-shadow: inset 0 0 0 2px $grey-light4;
+    transition: 300ms ease-out;
+  }
+  &:focus {
+    box-shadow: inset 0 0 0 2px $black;
+    color: $black-light;
+    outline: none;
+    transition: 300ms ease-out;
+  }
+  &:invalid {
+    box-shadow: inset 0 0 0 2px $pink-dark;
+    color: $pink-dark;
+  }
+
+  margin-top: 10px;
+  padding: 12px 15px;
+  box-sizing: border-box;
+}
+
+.modal__button {
+  padding-left: 82px;
+  padding-right: 82px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+
+  font-size: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+  &:hover.modal__close::before,
+  &:hover.modal__close::after,
+  &:focus.modal__close::before,
+  &:focus.modal__close::after {
+    background-color: $pink;
+    transition: 300ms ease-out;
+  }
+  &:active.modal__close::before,
+  &:active.modal__close::after {
+    background-color: rgba($pink, 0.1);
+    transition: 300ms ease-out;
+  }
+}
+
+.modal__close::before {
+  content: "";
+  width: 4px;
+  position: absolute;
+  background-color: rgba($pink, 0.3);
+  top: 0;
+  left: 0;
+  height: 25px;
+  transform: rotate(45deg);
+}
+
+.modal__close::after {
+  content: "";
+  width: 4px;
+  position: absolute;
+  background-color: rgba($pink, 0.3);
+  top: 0;
+  left: 0;
+  height: 25px;
+  transform: rotate(-45deg);
+}

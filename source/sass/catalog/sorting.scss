@@ -1,0 +1,84 @@
+.sorting__list {
+  margin: 0;
+  padding: 0;
+}
+
+.sorting__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+.sorting__item {
+  list-style: none;
+}
+
+.sorting__item + .sorting__item {
+  margin-left: 22px;
+}
+
+.sorting__item:last-of-type {
+  margin-left: 0;
+}
+
+.sorting__button {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  color: rgba($black, 0.3);
+  &:hover,
+  &:focus {
+    color: rgba($black, 0.6);
+    outline: none;
+    transition: 300ms ease-out;
+  }
+  &:active {
+    color: $black;
+    transition: 300ms ease-out;
+  }
+
+  padding: 0;
+}
+
+.sorting__button--active {
+  border-color: $grey;
+  color: $black;
+}
+
+.button-triangle {
+  font-size: 0;
+  &:hover .button-triangle__img,
+  &:focus .button-triangle__img {
+    border-top: 13px solid $grey;
+    transition: 300ms ease-out;
+  }
+  &:active .button-triangle__img {
+    border-top: 13px solid $black;
+    transition: 300ms ease-out;
+  }
+
+  padding-left: 20px;
+}
+
+.button-triangle__img {
+  display: block;
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-bottom-width: 0;
+  border-top: 13px solid $grey-light7;
+}
+
+.button-triangle__img--active {
+  border-top: 13px solid $black;
+  transition: 300ms ease-out;
+}
+
+.button-triangle__top {
+  transform: scale(1, -1)
+}

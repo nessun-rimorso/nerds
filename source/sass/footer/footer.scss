@@ -1,0 +1,131 @@
+.footer__location {
+  position: relative;
+  margin-bottom: 70px;
+}
+
+.location__address {
+  position: relative;
+  padding: 0 20px;
+  width: 1200px;
+  height: 416px;
+  margin: 0 auto;
+}
+
+.address__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: $white;
+}
+
+.address__title {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.address__text {
+  line-height: 18px;
+  color: $grey-darkeness4;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.address__text:last-of-type {
+  margin-bottom: 35px;
+}
+
+.address__button {
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.map__img {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+.footer__socials {
+  padding: 0 20px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.map__img img {
+  position: absolute;
+  top: -416px;
+  z-index: -1;
+
+  display: block;
+  height: 416px;
+
+  background-color: $grey-light6;
+}
+
+.socials__title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+  margin: 0;
+}
+
+.socials__text {
+  line-height: 22px;
+  color: $black-light;
+  margin: 0;
+}
+
+.socials__links {
+  margin: 0;
+  padding: 0;
+  margin-right: 140px;
+}
+
+.social__item {
+  list-style: none;
+}
+
+.social__item + .social__item {
+  padding-left: 12px;
+}
+
+.social__link {
+  font-size: 0;
+  display: block;
+  height: 78px;
+  width: 78px;
+  border-radius: 50%;
+  background-color: $grey-light;
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $pink-dark;
+    transition: 300ms ease-out;
+  }
+  &:active {
+    background-color: $pink-darkeness;
+    box-shadow: inset 0 5px 0 -1px $pink-darkeness2;
+    transition: 300ms ease-out;
+  }
+  &:active svg {
+    fill: $pink-cloudy;
+    transition: 300ms ease-out;
+  }
+}
+
+.social__link svg {
+  fill: $white;
+}

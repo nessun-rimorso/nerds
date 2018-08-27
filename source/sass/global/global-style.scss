@@ -1,0 +1,99 @@
+@mixin section-border {
+  border-bottom: 2px solid $grey-light6;
+}
+
+@mixin background-filter {
+  background-color: $grey-light6;
+  border-radius: 3px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: $black;
+  font-weight: normal;
+  font-size: 16px;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  &:hover,
+  &:focus {
+    color: $pink;
+    outline: none;
+    transition: 300ms ease-out;
+  }
+  &:active {
+    color: $grey;
+    transition: 300ms ease-out;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0 );
+  width: 1px;
+  width: 1px;
+  margin: -1px;
+}
+
+.button {
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  line-height: 18px;
+  background-color: $pink;
+  border-radius: 5px;
+  border: none;
+  padding: 16px 40px;
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: $pink-dark;
+    color: $white;
+    transition: 300ms ease-out;
+  }
+  &:active {
+    background-color: $pink-darkeness;
+    color: transparentize($white, 0.3);
+    box-shadow: inset 0 5px 0 -1px $pink-darkeness2;
+    transition: 300ms ease-out;
+  }
+}
+
+.button--grey {
+  @include background-filter;
+  border: none;
+  font-weight: 600;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  color: inherit;
+  padding: 16px 20px;
+  &:hover,
+  &:focus {
+    background-color: $grey-dark;
+    color: inherit;
+    outline: none;
+    box-shadow: none;
+  }
+  &:active {
+    background-color: $grey-darkeness;
+    box-shadow: inset 0 5px 0 -1px $grey-darkeness2;
+    color: rgba($black, 0.3);
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
