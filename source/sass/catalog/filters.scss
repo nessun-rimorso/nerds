@@ -1,6 +1,9 @@
 .main__filters {
   width: 260px;
   margin-right: 40px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .filter-fieldset {
@@ -33,6 +36,7 @@
   display: block;
   width: 260px;
   min-height: 80px;
+
   position: relative;
 }
 
@@ -41,6 +45,7 @@
   display: block;
   width: 211px;
   height: 2px;
+
   position: absolute;
   transform: translateX(-50%);
   top: 50%;
@@ -56,6 +61,7 @@
 
 .filter-btn {
   font-size: 0;
+
   border: none;
   border-radius: 50%;
   display: block;
@@ -92,6 +98,13 @@
 
 .filter-fieldset__signature {
   line-height: 20px;
+
+  display: flex;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+	align-items: center;
 }
 
 .filter-fieldset__rate {
@@ -105,6 +118,12 @@
   box-sizing: border-box;
 }
 
+.filter-fieldset__input-rate {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .filter-fieldset__signature--uppercase + .filter-fieldset__signature--uppercase {
   padding-left: 33px;
 }
@@ -114,8 +133,9 @@
 }
 
 .filter-fieldset__radio-indicator {
-  display: block;
   position: relative;
+
+  display: block;
   width: 25px;
   height: 25px;
   background-color: $white;
@@ -123,6 +143,8 @@
   border-radius: 50%;
   margin-right: 10px;
   margin-left: 10px;
+
+  transition: 300ms easy-out;
 }
 
 .filter-fieldset__signature input[type="radio"]:checked ~ .filter-fieldset__radio-indicator {
@@ -153,6 +175,7 @@
 
 .filter-fieldset__checkbox-indicator {
   position: relative;
+  
   display: block;
   width: 25px;
   height: 25px;
@@ -161,6 +184,8 @@
   border-radius: 3px;
   margin-right: 12px;
   margin-left: 10px;
+
+  transition: 300ms easy-out;
 }
 
 .filter-fieldset__signature input[type="checkbox"]:checked ~ .filter-fieldset__checkbox-indicator::before {

@@ -7,22 +7,33 @@
   padding-bottom: 80px;
   margin: 0 auto;
   width: 1200px;
+
+  display: flex;
+  justify-content: space-between;
+
+  display: grid;
+  grid-auto-flow: column;
 }
 
 .info__description {
   width: 660px;
   margin-top: 35px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .description__title {
   font-size: 45px;
   font-weight: 600;
   line-height: 45px;
+
   margin-bottom: 30px;
 }
 
 .description__text {
   line-height: 24px;
+
   margin: 0;
   margin-bottom: 45px;
 }
@@ -45,6 +56,7 @@
   line-height: 18px;
   list-style: none;
   position: relative;
+
   &::before {
     content: "";
     width: 25px;
@@ -77,6 +89,14 @@
 
 .statistics__table {
   margin: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
 }
 
 .statistics__title {

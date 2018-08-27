@@ -14,12 +14,18 @@
   position: absolute;
   bottom: 80px;
   left: 50%;
+
+  display: flex;
+
+  display: grid;
+	grid-auto-flow: column;
 }
 
 .slider-controls__control {
   font-size: 0;
   border: none;
   background-color: $white;
+
   display: block;
   height: 18px;
   width: 18px;
@@ -54,6 +60,12 @@
   padding-top: 60px;
   padding-bottom: 80px;
   background-position: right center;
+
+  display: flex;
+  flex-direction: column;
+
+  display: grid;
+	justify-items: start;
 }
 
 .slider__features {
@@ -65,6 +77,7 @@
   font-size: 55px;
   font-weight: 600;
   line-height: 55px;
+
   margin: 0;
   margin-bottom: 25px;
   width: 520px;
@@ -73,6 +86,7 @@
 .slider__text {
   line-height: 24px;
   color: #283136;
+
   margin: 0;
   width: 420px;
 }
@@ -80,7 +94,9 @@
 .slider__button {
   font-weight: 600;
   line-height: 18px;
+
   padding-left: 55px;
   padding-right: 55px;
   margin-top: 42px;
+  margin-right: auto;
 }

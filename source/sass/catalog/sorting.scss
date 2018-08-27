@@ -1,6 +1,13 @@
 .sorting__list {
   margin: 0;
   padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 400px auto;
 }
 
 .sorting__title {
@@ -10,6 +17,7 @@
   text-transform: uppercase;
 
   margin: 0;
+  margin-right: auto;
 }
 
 .sorting__item {
@@ -28,21 +36,22 @@
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+
   border: none;
   background-color: transparent;
   color: rgba($black, 0.3);
+  padding: 0;
+
   &:hover,
   &:focus {
     color: rgba($black, 0.6);
     outline: none;
-    transition: 300ms ease-out;
   }
   &:active {
     color: $black;
-    transition: 300ms ease-out;
   }
 
-  padding: 0;
+  transition: 300ms ease-out;
 }
 
 .sorting__button--active {
@@ -52,17 +61,18 @@
 
 .button-triangle {
   font-size: 0;
+
   &:hover .button-triangle__img,
   &:focus .button-triangle__img {
     border-top: 13px solid $grey;
-    transition: 300ms ease-out;
   }
   &:active .button-triangle__img {
     border-top: 13px solid $black;
-    transition: 300ms ease-out;
   }
 
   padding-left: 20px;
+
+  transition: 300ms ease-out;
 }
 
 .button-triangle__img {

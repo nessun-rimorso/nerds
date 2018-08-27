@@ -8,6 +8,17 @@
   width: 1200px;
 }
 
+.products__list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  display: grid;
+	grid-auto-flow: column;
+	justify-content: space-between;
+}
+
 .products__item {
   list-style: none;
 }

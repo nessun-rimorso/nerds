@@ -1,14 +1,23 @@
 .main__pagination {
   margin: 0;
   padding: 0;
+  width: 443px;
+
+  display: flex;
+  justify-content: space-between;
+
+  display: grid;
+	grid-auto-flow: column;
+	grid-gap: 11px;
+	justify-content: start;
 }
 
 .pagination__item {
   list-style: none;
-}
 
-.pagination__item + .pagination__item {
-  margin-left: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination__link {
@@ -24,6 +33,7 @@
 
 .pagination__link--next {
   min-width: 260px;
+  box-sizing: border-box;
 }
 
 .pagination__link--active {

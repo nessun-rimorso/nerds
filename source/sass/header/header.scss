@@ -6,15 +6,28 @@
   width: 1200px;
   padding: 40px 20px 15px 20px;
   margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  display: grid;
+	grid-auto-flow: column;
+  align-items: center;
 }
 
 .header__list {
   margin: 0;
   padding: 0;
-}
 
-.header__cart {
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 440px;
+  justify-content: space-between;
+
+  display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 45px;
+  justify-self: center;
 }
 
 .header__logo {
@@ -22,12 +35,14 @@
   &:focus svg {
     fill: #303030;
     outline: none;
-    transition: 300ms ease-out;
   }
   &:active svg {
     fill: $grey;
-    transition: 300ms ease-out;
   }
+
+margin-right: auto;
+
+  transition: 300ms ease-out;
 }
 
 .nav__item {
@@ -38,15 +53,12 @@
   fill: $grey;
 }
 
-.nav__item + .nav__item {
-  padding-left: 45px;
-  padding-bottom: 20px;
-}
-
 .nav__link {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 30px;
+
+  transition: 300ms ease-out;
 }
 
 .nav__link--active {
@@ -56,6 +68,14 @@
   &:focus,
   &:active {
     color: inherit;
-    transition: 300ms ease-out;
   }
+}
+
+.header__cart svg {
+  fill: $grey;
+
+  margin-right: 25px;
+  margin-left: auto;
+
+  justify-self: end;
 }
