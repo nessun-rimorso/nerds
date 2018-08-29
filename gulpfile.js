@@ -34,8 +34,7 @@ gulp.task('sass', function () {
             title: "style"
         }))
         .pipe(gp.csso())
-        .pipe(gulp.dest('dist/css'))
-.
+        .pipe(gulp.dest('dist/css/'))
     pipe(browserSync.reload({
         stream: true
     }))
@@ -65,4 +64,3 @@ gulp.task('default', gulp.series(
     gulp.parallel('pug', 'sass', 'scripts'),
     gulp.parallel('watch', 'serve')
 ));
-    
