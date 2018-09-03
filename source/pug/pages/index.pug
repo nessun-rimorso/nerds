@@ -133,13 +133,16 @@ html.no-js(lang="ru-RU")
             a.social__link(href="#") Instagram
               include ../../image/svg-image/insta-icon.svg
     section.modal
-      h2.modal__title Напишите нам
-      form.modal__form
-        label.modal__label Ваше имя:
-          input.modal__field(type="text" placeholder="Имя Фамилия" autocomplete="on" name="name")
-        label.modal__label Ваш e-mail:
-          input.modal__field(type="email" placeholder="email@example.com" autocomplete="on" name="email")
-        label.modal__label Текст письма:
-          textarea.modal__field(placeholder="В свободной форме" name="comment" cols="30" rows="6")
-        button.modal__button.button(type="submit") Отправить
-      button.modal__close Закрыть окно
+      .modal__popup
+        h2.modal__title Напишите нам
+        form.modal__form
+          label.modal__label Ваше имя:
+            input.modal__field(type="text" placeholder="Имя Фамилия" autocomplete="on" name="name")
+          label.modal__label Ваш e-mail:
+            input.modal__field(type="email" placeholder="email@example.com" autocomplete="on" name="email")
+          label.modal__label Текст письма:
+            textarea.modal__field(placeholder="В свободной форме" name="comment" cols="30" rows="6")
+          button.modal__button.button(type="submit") Отправить
+        button.modal__close Закрыть окно
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="../../js/script.js")

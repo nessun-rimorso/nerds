@@ -40,6 +40,7 @@
   position: relative;
 }
 
+//slider
 .filter-fieldset__line {
   background-color: $grey-light3;
   display: block;
@@ -52,6 +53,7 @@
   left: 50%;
 }
 
+// bar
 .filter-fieldset__range {
   background-color: $green;
   display: block;
@@ -72,6 +74,7 @@
               inset 0 0 0 8px $white;
 }
 
+// lp
 .filter-fieldset__btn-min {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -79,6 +82,7 @@
   left: 0;
 }
 
+// rp
 .filter-fieldset__btn-max {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -175,7 +179,7 @@
 
 .filter-fieldset__checkbox-indicator {
   position: relative;
-  
+
   display: block;
   width: 25px;
   height: 25px;

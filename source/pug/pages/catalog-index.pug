@@ -31,11 +31,11 @@ html.no-js(lang="ru-RU")
           fieldset.filters__filter-fieldset.filter-fieldset
             legend.filter-fieldset__title Стоимость
             div.filter-fieldset__field
-              div.filter-fieldset__line
-                div.filter-fieldset__range
+              div.filter-fieldset__line.slider
+                div.filter-fieldset__range.bar
                   h3.visually-hidden Кнопки выбора диапазона цены
-                button.filter-fieldset__btn-min.filter-btn(type="button") кнопка от
-                button.filter-fieldset__btn-max.filter-btn(type="button") кнопка до
+                button.filter-fieldset__btn-min.filter-btn.lp(type="button" data-pos="0.1") кнопка от
+                button.filter-fieldset__btn-max.filter-btn.rp(type="button" data-pos="0.8") кнопка до
             .filter-fieldset__input-rate
               label.filter-fieldset__signature--uppercase от
                 input.filter-fieldset__rate(type="number" value="0")

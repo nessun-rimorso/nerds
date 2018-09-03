@@ -135,20 +135,24 @@
       </section>
     </footer>
     <section class="modal">
-      <h2 class="modal__title">Напишите нам</h2>
-      <form class="modal__form">
-        <label class="modal__label">Ваше имя:
-          <input class="modal__field" type="text" placeholder="Имя Фамилия" autocomplete="on" name="name">
-        </label>
-        <label class="modal__label">Ваш e-mail:
-          <input class="modal__field" type="email" placeholder="email@example.com" autocomplete="on" name="email">
-        </label>
-        <label class="modal__label">Текст письма:
-          <textarea class="modal__field" placeholder="В свободной форме" name="comment" cols="30" rows="6"></textarea>
-        </label>
-        <button class="modal__button button" type="submit">Отправить</button>
-      </form>
-      <button class="modal__close">Закрыть окно</button>
+      <div class="modal__popup">
+        <h2 class="modal__title">Напишите нам</h2>
+        <form class="modal__form">
+          <label class="modal__label">Ваше имя:
+            <input class="modal__field" type="text" placeholder="Имя Фамилия" autocomplete="on" name="name">
+          </label>
+          <label class="modal__label">Ваш e-mail:
+            <input class="modal__field" type="email" placeholder="email@example.com" autocomplete="on" name="email">
+          </label>
+          <label class="modal__label">Текст письма:
+            <textarea class="modal__field" placeholder="В свободной форме" name="comment" cols="30" rows="6"></textarea>
+          </label>
+          <button class="modal__button button" type="submit">Отправить</button>
+        </form>
+        <button class="modal__close">Закрыть окно</button>
+      </div>
     </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../js/script.js"></script>
   </body>
 </html>
