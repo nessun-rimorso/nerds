@@ -31,16 +31,16 @@ html.no-js(lang="ru-RU")
           fieldset.filters__filter-fieldset.filter-fieldset
             legend.filter-fieldset__title Стоимость
             div.filter-fieldset__field
-              div.filter-fieldset__line.slider
-                div.filter-fieldset__range.bar
+              div.filter-fieldset__line.line
+                div.filter-fieldset__range
                   h3.visually-hidden Кнопки выбора диапазона цены
-                button.filter-fieldset__btn-min.filter-btn.lp(type="button" data-pos="0.1") кнопка от
-                button.filter-fieldset__btn-max.filter-btn.rp(type="button" data-pos="0.8") кнопка до
+                  button.lp(type="button" data-pos="0.0") кнопка от
+                  button.rp(type="button" data-pos="0.74998") кнопка до
             .filter-fieldset__input-rate
               label.filter-fieldset__signature--uppercase от
-                input.filter-fieldset__rate(type="number" value="0")
+                input.filter-fieldset__rate.start-rate(type="number" step="100" value="0")
               label.filter-fieldset__signature--uppercase до
-                input.filter-fieldset__rate(type="number" value="15000")
+                input.filter-fieldset__rate.end-rate(type="number" step="100" value="15000")
           fieldset.filters__filter-fieldset.filter-fieldset
             legend.filter-fieldset__title Сетка:
             label.filter-fieldset__signature
@@ -218,3 +218,17 @@ html.no-js(lang="ru-RU")
           li.social__item
             a.social__link(href="#") Instagram
               include ../../image/svg-image/insta-icon.svg
+      section.modal
+        .modal__popup
+          h2.modal__title Напишите нам
+          form.modal__form
+            label.modal__label Ваше имя:
+              input.modal__field(type="text" placeholder="Имя Фамилия" autocomplete="on" name="name")
+            label.modal__label Ваш e-mail:
+              input.modal__field(type="email" placeholder="email@example.com" autocomplete="on" name="email")
+            label.modal__label Текст письма:
+              textarea.modal__field(placeholder="В свободной форме" name="comment" cols="30" rows="6")
+            button.modal__button.button(type="submit") Отправить
+          button.modal__close Закрыть окно
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="../../js/script.js")

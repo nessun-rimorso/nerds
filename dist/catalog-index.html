@@ -28,20 +28,20 @@
           <fieldset class="filters__filter-fieldset filter-fieldset">
             <legend class="filter-fieldset__title">Стоимость</legend>
             <div class="filter-fieldset__field">
-              <div class="filter-fieldset__line slider">
-                <div class="filter-fieldset__range bar">
+              <div class="filter-fieldset__line line">
+                <div class="filter-fieldset__range">
                   <h3 class="visually-hidden">Кнопки выбора диапазона цены</h3>
+                  <button class="lp" type="button" data-pos="0.0">кнопка от</button>
+                  <button class="rp" type="button" data-pos="0.74998">кнопка до</button>
                 </div>
-                <button class="filter-fieldset__btn-min filter-btn lp" type="button" data-pos="0.1">кнопка от</button>
-                <button class="filter-fieldset__btn-max filter-btn rp" type="button" data-pos="0.8">кнопка до</button>
               </div>
             </div>
             <div class="filter-fieldset__input-rate">
               <label class="filter-fieldset__signature--uppercase">от
-                <input class="filter-fieldset__rate" type="number" value="0">
+                <input class="filter-fieldset__rate start-rate" type="number" step="100" value="0">
               </label>
               <label class="filter-fieldset__signature--uppercase">до
-                <input class="filter-fieldset__rate" type="number" value="15000">
+                <input class="filter-fieldset__rate end-rate" type="number" step="100" value="15000">
               </label>
             </div>
           </fieldset>
@@ -218,6 +218,26 @@
               Instagram<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21"><path fill="$white" d="M18 0H3C1.35 0 0 1.35 0 3v15c0 1.65 1.35 3 3 3h15c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3zm-7.5 7c1.93 0 3.5 1.57 3.5 3.5S12.43 14 10.5 14 7 12.43 7 10.5 8.57 7 10.5 7zM18 18H3V9h1.181A6.504 6.504 0 0 0 4 10.5a6.5 6.5 0 1 0 13 0 6.45 6.45 0 0 0-.181-1.5H18v9zm0-11h-4V3h4v4z"/></svg></a></li>
         </ul>
       </section>
+      <section class="modal">
+        <div class="modal__popup">
+          <h2 class="modal__title">Напишите нам</h2>
+          <form class="modal__form">
+            <label class="modal__label">Ваше имя:
+              <input class="modal__field" type="text" placeholder="Имя Фамилия" autocomplete="on" name="name">
+            </label>
+            <label class="modal__label">Ваш e-mail:
+              <input class="modal__field" type="email" placeholder="email@example.com" autocomplete="on" name="email">
+            </label>
+            <label class="modal__label">Текст письма:
+              <textarea class="modal__field" placeholder="В свободной форме" name="comment" cols="30" rows="6"></textarea>
+            </label>
+            <button class="modal__button button" type="submit">Отправить</button>
+          </form>
+          <button class="modal__close">Закрыть окно</button>
+        </div>
+      </section>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../js/script.js"></script>
   </body>
 </html>

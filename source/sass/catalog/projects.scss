@@ -2,14 +2,6 @@
   border-radius: 5px;
   width: 360px;
   position: relative;
-  &:hover .project__description,
-  &:hover .project__description--background {
-    opacity: 1;
-  }
-  &:hover .project__head {
-    background-color: $grey-darkeness3;
-    transition: 300ms ease-out;
-  }
 }
 
 .projects__list {
@@ -48,6 +40,11 @@
   transition: 300ms ease-out;
 }
 
+.project:hover .project__head {
+  background-color: $grey-darkeness3;
+  transition: 300ms ease-out;
+}
+
 .project__description {
   position: absolute;
   z-index: 10;
@@ -61,6 +58,13 @@
   align-items: center;
   opacity: 0;
   transition: 300ms ease-out;
+}
+
+.project:hover .project__description,
+.project:hover .project__description--background,
+.project:focus .project__description,
+.project:focus .project__description--background {
+  opacity: 1;
 }
 
 .project__description--background {
@@ -85,6 +89,7 @@
   &:focus,
   &:active {
     color: $black;
+    opacity: 1;
   }
 
   margin-bottom: 20px;
@@ -97,10 +102,6 @@
 
   margin: 0;
   margin-bottom: 25px;
-}
-
-.project__link:focus {
-  opacity: 1;
 }
 
 .project__button {
